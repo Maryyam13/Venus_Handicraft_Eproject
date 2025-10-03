@@ -143,59 +143,48 @@ $(document).ready(function () {
 });
 
 //////////////////////////////
-// star rating
-
-
-$(document).ready(function () {
-    $(".star-rating span").click(function () {
-        var value = $(this).data("value");
-        $("#rating-value").val(value);
-
-        $(".star-rating span").removeClass("active");
-        $(this).addClass("active");
-        $(this).prevAll().addClass("active");
-    });
-});
 
 // / < !--jquery validation-- >
-
 $(document).ready(function () {
-    $("#myForm").validate({
-        rules: {
-            first_name: {
-                required: true,
-                minlength: 3
+    $(".validateForm").each(function () {
+        $(this).validate({
+            rules: {
+                first_name: {
+                    required: true,
+                    minlength: 3
+                },
+                last_name: {
+                    required: true,
+                    minlength: 3
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                phoneNumber: {
+                    required: true,
+                    minlength: 11
+                }
             },
-            last_name: {
-                required: true,
-                minlength: 3
+            messages: {
+                first_name: {
+                    required: "First name is required",
+                    minlength: "Name should be at least 3 characters long"
+                },
+                last_name: {
+                    required: "Last name is required",
+                    minlength: "Name should be at least 3 characters long"
+                },
+                email: {
+                    required: "Email must be provided",
+                    email: "Please enter a valid email address"
+                },
+                phoneNumber: {
+                    required: "Phone number cannot be empty",
+                    minlength: "Number cannot be less than 11 digits"
+                }
             },
-            email: {
-                required: true,
-                email: true  // add email validation
-            },
-            phoneNumber: {
-                required: true,
-                minlength: 11
-            }
-        },
-        messages: {
-            first_name: {
-                required: "First name is required",
-                minlength: "Name should be at least 3 characters long"
-            },
-            last_name: {
-                required: "Last name is required",
-                minlength: "Name should be at least 3 characters long"
-            },
-            email: {
-                required: "Email must be provided",
-                email: "Please enter a valid email address"
-            },
-            phoneNumber: {
-                required: "Phone number cannot be empty",
-                minlength: "Number cannot be less than 11 digits"
-            }
-        }
+             errorClass: "error", 
+        });
     });
 });
