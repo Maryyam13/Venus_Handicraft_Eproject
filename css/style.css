@@ -121,6 +121,13 @@ a {
     outline-offset: 3px;
 }
 
+.navlinks li a:visited,
+.blog:visited {
+    color: #C9A227;
+
+}
+
+
 .navlinks .feedback {
     display: none;
 }
@@ -1639,17 +1646,19 @@ a {
 
 /* GLOBAL CUSTOMERS SECTION */
 .global-customers {
-    background: #fdf6ee;
+    /* background: #fdf6ee; */
+    padding: 3rem;
     text-align: center;
 }
 
-.global-customers h2 {
-    font-size: 2.5rem;
-    color: #5a3e2b;
+.global-customers h3 {
+    font-size: 3rem;
+    color: var(--charcoal);
 }
 
 .global-customers p {
     color: #6c757d;
+    font-size: 1.6rem;
 }
 
 .global-customers img {
@@ -1690,7 +1699,8 @@ a {
 .flag-box p {
     font-size: 1.4rem;
     margin: 0;
-    color: var(--charcoal);
+    color: var(--off-white);
+    font-weight: 700;
 }
 
 .flag-box:hover {
@@ -1759,13 +1769,21 @@ a {
 }
 
 /* Milestone Cards */
+
+.milestone_section{
+    background: var(--off-white);
+    padding: 2rem;
+
+}
+
 .milestone-card {
     background: var(--charcoal);
     color: var(--white);
     padding: 2rem;
     border-radius: 15px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
     height: 100%;
+    text-align: center;
 }
 
 .milestone-card h4 {
@@ -1773,9 +1791,13 @@ a {
     font-weight: bold;
 }
 
+.milestone-card p{
+    font-size: 1.4rem;
+}
+
 .milestone-card:hover {
     background: var(--earth-green);
-    transform: scale(1.05);
+    transform: translateY(-8px);
 }
 
 
