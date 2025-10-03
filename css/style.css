@@ -98,17 +98,32 @@ a {
     text-transform: uppercase;
     color: var(--off-white);
     letter-spacing: 0.1em;
+    padding: 0.4em;
 
 }
 
-.navlinks li a:hover {
+.navlinks li a:hover,
+.blog:hover {
     font-weight: bold;
+    background-color: #fff8f04c;
+    border-radius: 12px;
+}
+
+.navlinks li a:active,
+.blog:active {
+    color: var(--off-white);
+    background-color: #182a2f54;
+}
+
+.navlinks li a:focus,
+.blog:focus {
+    outline: 2px solid var(--off-white);
+    outline-offset: 3px;
 }
 
 .navlinks .feedback {
     display: none;
 }
-
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* navbar bottom */
@@ -154,7 +169,7 @@ a {
     display: block;
     font-size: 1.8rem;
     text-transform: uppercase;
-    padding: 0.25em;
+    padding: 0.4em;
     color: var(--off-white);
     letter-spacing: 0.1em;
 }
@@ -346,6 +361,49 @@ a {
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
+
+    .navlinks li a,
+    .blog {
+        position: relative;
+    }
+
+    .navlinks li a::after,
+    .blog::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background-color: var(--off-white);
+        transition: width 0.3s ease;
+    }
+
+    .navlinks li a:hover::after,
+    .blog:hover::after {
+        width: 100%;
+    }
+
+    .navlinks li a:hover,
+    .blog:hover {
+        font-weight: bold;
+        background-color: none;
+        border-radius: none;
+    }
+
+    .navlinks li a:active,
+    .blog:active {
+        color: var(--off-white);
+        background-color: var(--brown);
+    }
+
+    .navlinks li a:focus,
+    .blog:focus {
+        outline: none;
+        outline-offset: none;
+    }
+
+
     .navlinks .feedback {
         display: block;
     }
@@ -429,28 +487,6 @@ a {
         transform: scale(1.05);
         box-shadow: 0 0 25px rgba(255, 248, 240, 0.6);
     }
-}
-
-.navlinks li a,
-.blog {
-    position: relative;
-}
-
-.navlinks li a::after,
-.blog::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0;
-    height: 2px;
-    background-color: var(--off-white);
-    transition: width 0.3s ease;
-}
-
-.navlinks li a:hover::after,
-.blog:hover::after {
-    width: 100%;
 }
 
 .down_arrow {
@@ -653,8 +689,9 @@ a {
     transition: background-color 0.3s ease, transform 0.3s ease;
     animation: pulseBtn 2.5s infinite ease-in-out;
     letter-spacing: 0.1em;
-     display: inline-block;   /* instead of block */
-    margin: 0 auto; 
+    display: inline-block;
+    /* instead of block */
+    margin: 0 auto;
     /* box-shadow: 0 8px 20px rgb(160, 82, 45, 0.5); */
 }
 
@@ -725,7 +762,7 @@ a {
         font-size: 1.4rem;
     }
 
-  
+
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -793,7 +830,7 @@ a {
 
 /* Image */
 .image-wrapper {
-    
+
     overflow: hidden;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgb(160, 82, 45, 0.5);
@@ -813,15 +850,15 @@ a {
 
 
 .image-wrapper p {
-   display: block;
-  width: 100%;
-  text-align: center;
-  font-size: 2rem;
-  color: var(--white);
-  font-weight: bold;
-  background-color: var(--charcoal);
-  margin: 0; 
-  padding: 1.5rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: bold;
+    background-color: var(--charcoal);
+    margin: 0;
+    padding: 1.5rem;
 
 }
 
@@ -848,8 +885,8 @@ a {
 
 }
 
-@media (max-width:768px){
-    .about-content .btn-learn{
+@media (max-width:768px) {
+    .about-content .btn-learn {
         margin: 0 auto;
     }
 
@@ -1340,12 +1377,12 @@ a {
     }
 
     .fa-quote-left,
-    .fa-quote-right{
+    .fa-quote-right {
         font-size: 1.5rem;
 
     }
 
-    .review-text .icon i{
+    .review-text .icon i {
         font-size: 1rem;
     }
 }
@@ -2672,92 +2709,92 @@ a {
 
 /* shopping cart page */
 .cart_section {
-  background: var(--off-white);
-  color: var(--charcoal);
+    background: var(--off-white);
+    color: var(--charcoal);
 }
 
 .cart_hdg {
-  font-size: 3rem;
-  color: var(--charcoal);
-  font-weight: bold;
+    font-size: 3rem;
+    color: var(--charcoal);
+    font-weight: bold;
 }
 
 .cart_table {
-  background: var(--off-white);
-  border: 1px solid var(--sage);
+    background: var(--off-white);
+    border: 1px solid var(--sage);
 }
 
 .cart_table th {
-  background: var(--earth-green);
-  color: var(--off-white);
-  padding: 12px;
-  font-size: 1.6rem;
+    background: var(--earth-green);
+    color: var(--off-white);
+    padding: 12px;
+    font-size: 1.6rem;
 }
 
 .cart_table td {
     font-size: 1.6rem;
-  padding: 12px;
-  vertical-align: middle;
+    padding: 12px;
+    vertical-align: middle;
 }
 
 .qty {
-  width: 60px;
-  padding: 5px;
-  border: 1px solid var(--sage);
-  border-radius: 5px;
-  text-align: center;
+    width: 60px;
+    padding: 5px;
+    border: 1px solid var(--sage);
+    border-radius: 5px;
+    text-align: center;
 }
 
 .remove_btn {
-  background: var(--brown);
-  border: none;
-  color: var(--off-white);
-  padding: 6px 10px;
-  border-radius: 5px;
-  transition: 0.3s;
+    background: var(--brown);
+    border: none;
+    color: var(--off-white);
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
 }
+
 .remove_btn:hover {
-  background: var(--charcoal);
+    background: var(--charcoal);
 }
 
 .cart_summary {
-  background: var(--sage);
-  color: var(--off-white);
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    background: var(--sage);
+    color: var(--off-white);
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .cart_summary h2 {
-  color: var(--charcoal);
-  font-size: 2rem;
+    color: var(--charcoal);
+    font-size: 2rem;
 }
 
 #checkout_btn {
-  background: var(--brown);
-  color: var(--off-white);
-  border: none;
-  padding: 12px;
-  font-size: 1.6rem;
-  letter-spacing: 0.1em;
-  border-radius: 8px;
-  transition: 0.3s;
+    background: var(--brown);
+    color: var(--off-white);
+    border: none;
+    padding: 12px;
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    border-radius: 8px;
+    transition: 0.3s;
 }
+
 #checkout_btn:hover {
-  background: var(--charcoal);
-  transform: scale(1.05);
+    background: var(--charcoal);
+    transform: scale(1.05);
 }
 
 #cart_subtotal,
 #cart_shipping,
-#cart_total{
+#cart_total {
     font-size: 1.6rem;
     color: var(--off-white);
 }
 
 .money p,
-.fw-bold{
+.fw-bold {
     font-size: 1.6rem;
     color: var(--charcoal);
 }
-
-
