@@ -1336,7 +1336,17 @@ a {
     }
 
     .review-text p {
-        font-size: 0.95rem;
+        font-size: 1.6rem;
+    }
+
+    .fa-quote-left,
+    .fa-quote-right{
+        font-size: 1.5rem;
+
+    }
+
+    .review-text .icon i{
+        font-size: 1rem;
     }
 }
 
