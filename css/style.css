@@ -105,7 +105,7 @@ a {
 .navlinks li a:hover,
 .blog:hover {
     font-weight: bold;
-    background-color: var(--brown);
+    background-color: #fff8f04c;
     border-radius: 12px;
 }
 
@@ -124,6 +124,7 @@ a {
 .navlinks .feedback {
     display: none;
 }
+
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* navbar bottom */
@@ -387,8 +388,8 @@ a {
     .navlinks li a:hover,
     .blog:hover {
         font-weight: bold;
-        background-color: none;
-        border-radius: none;
+        background-color:var(--brown);
+        border-radius: 0px;
     }
 
     .navlinks li a:active,
@@ -402,7 +403,6 @@ a {
         outline: none;
         outline-offset: none;
     }
-
 
     .navlinks .feedback {
         display: block;
