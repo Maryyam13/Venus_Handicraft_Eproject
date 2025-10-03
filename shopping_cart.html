@@ -139,14 +139,14 @@
         </div>
     </header>
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-    <section class="cart_section container-fluid" data-aos="zoom-in-up">
-        <h1 class="cart_hdg">Shopping Details</h1>
+    <section class="cart_section container-fluid py-5" data-aos="zoom-in-up">
+        <h1 class="cart_hdg text-center mb-5">Shopping Details</h1>
         <div class="cart_container container">
             <div class="row g-5">
                 <!-- Left: Cart Table -->
-                <div class="col-12 col-md-6 col-lg-9">
-                    <div class="cart_products">
-                        <table class="cart_table">
+                <div class="col-12 col-md-8">
+                    <div class="cart_products table-responsive" data-aos="fade-right">
+                        <table class="cart_table table table-bordered align-middle text-center">
                             <thead class="tb_head">
                                 <tr>
                                     <th>Product</th>
@@ -154,100 +154,80 @@
                                     <th>Quantity</th>
                                     <th>Subtotal</th>
                                     <th>Remove</th>
-
                                 </tr>
                             </thead>
                             <tbody class="tb_body">
                                 <tr>
                                     <td class="product_info">Aluminium Vase</td>
                                     <td class="price">$25,00</td>
-                                    <td>
-                                        <input type="number" class="qty" value="1" min="1">
-                                    </td>
+                                    <td><input type="number" class="qty" value="1" min="1"></td>
                                     <td class="subtotal">$25,00</td>
                                     <td><button class="remove_btn"><i class="bi bi-trash3-fill"></i></button></td>
                                 </tr>
                                 <tr>
                                     <td class="product_info">Iron Stand</td>
                                     <td class="price">$45,999</td>
-                                    <td>
-                                        <input type="number" class="qty" value="1" min="1">
-                                    </td>
-                                    <td class="subtotal">250000</td>
+                                    <td><input type="number" class="qty" value="1" min="1"></td>
+                                    <td class="subtotal">$250,000</td>
                                     <td><button class="remove_btn"><i class="bi bi-trash3-fill"></i></button></td>
                                 </tr>
                                 <tr>
                                     <td class="product_info">Wooden Coffee Table</td>
                                     <td class="price">$45,000</td>
-                                    <td>
-                                        <input type="number" class="qty" value="1" min="1">
-                                    </td>
+                                    <td><input type="number" class="qty" value="1" min="1"></td>
                                     <td class="subtotal">$45,000</td>
                                     <td><button class="remove_btn"><i class="bi bi-trash3-fill"></i></button></td>
                                 </tr>
                                 <tr>
                                     <td class="product_info">Handcrafted Armchair</td>
                                     <td class="price">$120,000</td>
-                                    <td>
-                                        <input type="number" class="qty" value="1" min="1">
-                                    </td>
+                                    <td><input type="number" class="qty" value="1" min="1"></td>
                                     <td class="subtotal">$120,000</td>
                                     <td><button class="remove_btn"><i class="bi bi-trash3-fill"></i></button></td>
                                 </tr>
                                 <tr>
                                     <td class="product_info">Vintage Bookshelf</td>
                                     <td class="price">$98,000</td>
-                                    <td>
-                                        <input type="number" class="qty" value="1" min="1">
-                                    </td>
+                                    <td><input type="number" class="qty" value="1" min="1"></td>
                                     <td class="subtotal">$98,000</td>
                                     <td><button class="remove_btn"><i class="bi bi-trash3-fill"></i></button></td>
                                 </tr>
                                 <tr>
                                     <td class="product_info">Bamboo Side Table</td>
                                     <td class="price">$38,000</td>
-                                    <td>
-                                        <input type="number" class="qty" value="1" min="1">
-                                    </td>
+                                    <td><input type="number" class="qty" value="1" min="1"></td>
                                     <td class="subtotal">$38,000</td>
                                     <td><button class="remove_btn"><i class="bi bi-trash3-fill"></i></button></td>
                                 </tr>
                                 <tr>
                                     <td class="product_info">Leather Recliner</td>
                                     <td class="price">$150,000</td>
-                                    <td>
-                                        <input type="number" class="qty" value="1" min="1">
-                                    </td>
+                                    <td><input type="number" class="qty" value="1" min="1"></td>
                                     <td class="subtotal">$150,000</td>
                                     <td><button class="remove_btn"><i class="bi bi-trash3-fill"></i></button></td>
                                 </tr>
                                 <tr>
                                     <td class="product_info">Handwoven Rug</td>
                                     <td class="price">$25,000</td>
-                                    <td>
-                                        <input type="number" class="qty" value="1" min="1">
-                                    </td>
+                                    <td><input type="number" class="qty" value="1" min="1"></td>
                                     <td class="subtotal">$25,000</td>
                                     <td><button class="remove_btn"><i class="bi bi-trash3-fill"></i></button></td>
                                 </tr>
-
-
                             </tbody>
                         </table>
                     </div>
                 </div>
 
                 <!-- Right: Cart Totals -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="cart_summary" data-aos="fade-left">
-                        <h1>Cart Details</h1>
+                <div class="col-12 col-md-4">
+                    <div class="cart_summary p-4" data-aos="fade-left">
+                        <h2 class="mb-4">Cart Details</h2>
                         <div class="money">
-                            <p>Subtotal: <span id="cart-subtotal">$476,000</span></p>
-                            <p>Shipping: <span id="cart-subtotal">$150</span></p>
+                            <p>Subtotal: <span id="cart_subtotal">$476,000</span></p>
+                            <p>Shipping: <span id="cart_shipping">$150</span></p>
                         </div>
-
-                        <p>Total: <span id="cart-total">$476,150</span></p>
-                        <button id="checkout_btn">Check Out</button>
+                        <p class="fw-bold">Total: <span id="cart_total">$476,150</span></p>
+                        <button id="checkout_btn" class="w-100 mt-3">Check Out</button>
                     </div>
                 </div>
             </div>
