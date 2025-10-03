@@ -519,7 +519,6 @@ a {
 }
 
 
-
 .icons .bi:hover {
     transform: scale(2);
     color: var(--charcoal);
@@ -577,15 +576,28 @@ a {
 
 .brand-icons a i.bi {
     color: var(--charcoal);
+    animation: iconPulse 3s infinite ease-in-out;
+}
+
+@keyframes iconPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////>>>>>>>>>>>>>>>>>>>> */
 /* website sections */
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
-/* //about section */
 
-/* hero section */
+
+/* home page hero section */
 .hero_section {
     position: relative;
     background: linear-gradient(rgba(24, 42, 47, 0.7), rgba(24, 42, 47, 0.7)), url("../images/header.jpg") center/cover no-repeat;
@@ -596,7 +608,7 @@ a {
     justify-content: center;
     padding: 2rem;
     overflow: hidden;
-    
+
 }
 
 
@@ -626,29 +638,43 @@ a {
 }
 
 /* CTA pulse */
-.hero_btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: var(--brown);
-    /* Terracotta */
-    color: var(--off-white);
-    text-decoration: none;
+
+.hero_text .btn-learn {
+    padding: 1rem 2.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    border-radius: 5px;
-    font-size: 1.8rem;
+    border: none;
+    border-radius: 50px;
+    background: var(--brown);
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease;
     transition: background-color 0.3s ease, transform 0.3s ease;
     animation: pulseBtn 2.5s infinite ease-in-out;
+    letter-spacing: 0.1em;
+     display: inline-block;   /* instead of block */
+    margin: 0 auto; 
+    /* box-shadow: 0 8px 20px rgb(160, 82, 45, 0.5); */
 }
 
-.hero_btn:hover {
+.hero_text .btn-learn:hover {
     background-color: var(--sage);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
 }
 
-/* hero_ image anime */
-.hero_section {
-    animation: bgZoom 8s infinite alternate ease-in-out;
-    /* was 20s */
+/* hero_btn anime */
+@keyframes pulseBtn {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
 }
 
 /* hero_text anime */
@@ -682,10 +708,6 @@ a {
         font-size: 1.6rem;
     }
 
-    .cta_btn {
-        font-size: 1.6rem;
-        padding: 10px 20px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -702,10 +724,7 @@ a {
         font-size: 1.4rem;
     }
 
-    .cta_btn {
-        font-size: 1.4rem;
-        padding: 8px 16px;
-    }
+  
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -750,7 +769,7 @@ a {
 }
 
 .about-content .btn-learn {
-    display: block;
+    display: inline-block;
     padding: 1rem 2.5rem;
     font-size: 1.4rem;
     font-weight: bold;
@@ -760,6 +779,8 @@ a {
     color: var(--white);
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-top: 1rem;
+
     /* box-shadow: 0 8px 20px rgb(160, 82, 45, 0.5); */
 }
 
@@ -820,6 +841,13 @@ a {
 
     .about-image {
         order: 1;
+    }
+
+}
+
+@media (max-width:768px){
+    .about-content .btn-learn{
+        margin: 0 auto;
     }
 
 }
@@ -1471,43 +1499,45 @@ a {
 
 /* about us page */
 .team-member {
-  background: var(--sage);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  height: auto;              /* allow flexible height */
-  min-height: 28rem;         /* keeps card balanced */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+    background: var(--sage);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: auto;
+    /* allow flexible height */
+    min-height: 28rem;
+    /* keeps card balanced */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .team-member:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .team-member img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 4px solid var(--off-white);
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 4px solid var(--off-white);
 }
 
 .team-member h2 {
-  color: var(--off-white);
-  margin: 10px 0;
-  font-size: 1.5rem;
-  font-weight: bold;
+    color: var(--off-white);
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .team-member p {
-  color: var(--charcoal);
-  font-size: 1.5rem;
-  font-weight: 500;
+    color: var(--charcoal);
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 
