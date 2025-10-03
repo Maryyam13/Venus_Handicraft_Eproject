@@ -792,7 +792,7 @@ a {
 
 /* Image */
 .image-wrapper {
-    position: relative;
+    
     overflow: hidden;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgb(160, 82, 45, 0.5);
@@ -812,13 +812,15 @@ a {
 
 
 .image-wrapper p {
-    position: absolute;
-    bottom: 0;
-    z-index: 100;
-    font-size: 2rem;
-    color: var(--white);
-    font-weight: bold;
-    padding-left: 10rem;
+   display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: bold;
+  background-color: var(--charcoal);
+  margin: 0; 
+  padding: 1.5rem;
 
 }
 
