@@ -596,7 +596,7 @@ a {
     justify-content: center;
     padding: 2rem;
     overflow: hidden;
-    animation: bgZoom 20s infinite alternate ease-in-out;
+    
 }
 
 
@@ -650,17 +650,6 @@ a {
     animation: bgZoom 8s infinite alternate ease-in-out;
     /* was 20s */
 }
-
-@keyframes bgZoom {
-    0% {
-        background-size: 100%;
-    }
-
-    100% {
-        background-size: 110%;
-    }
-}
-
 
 /* hero_text anime */
 @keyframes fadeSlideUp {
