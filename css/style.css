@@ -310,6 +310,7 @@ a {
     .hamburger {
         display: block;
         cursor: pointer;
+        font-size: 2.5rem;
     }
 
     .navbar_top {
@@ -2800,4 +2801,90 @@ a {
     color: var(--brown);
     margin-bottom: 1rem;
     font-size: 2rem;
+}
+
+/* ============================= */
+/* Cart Section Responsiveness   */
+/* ============================= */
+
+/* Tablet screens (≤ 992px) */
+@media (max-width: 992px) {
+    .cart_table {
+        font-size: 1.3rem;
+    }
+
+    .tb_head th {
+        font-size: 1.5rem;
+    }
+
+    .tb_body td {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    .qty {
+        width: 50px;
+    }
+}
+
+/* Mobile screens (≤ 768px) */
+@media (max-width: 768px) {
+    /* Make cart table scrollable */
+    .cart_products {
+        overflow-x: auto;
+    }
+
+    .cart_table {
+        min-width: 600px;  /* prevents table from breaking */
+        font-size: 1.1rem;
+    }
+
+    .tb_head th,
+    .tb_body td {
+        padding: 0.5rem;
+    }
+
+    .qty {
+        width: 45px;
+    }
+
+    /* Cart summary takes full width */
+    .cart_summary {
+        margin-top: 2rem;
+        width: 100%;
+        height: auto;
+    }
+
+    #checkout_btn {
+        font-size: 1.3rem;
+        padding: 0.6rem;
+    }
+}
+
+/* Extra small phones (≤ 480px) */
+@media (max-width: 480px) {
+    .cart_hdg {
+        font-size: 2rem;
+    }
+
+    .cart_table {
+        font-size: 1rem;
+        min-width: 500px;
+    }
+
+    .tb_head th {
+        font-size: 1.2rem;
+    }
+
+    .tb_body td {
+        font-size: 1rem;
+    }
+
+    .cart_summary h1 {
+        font-size: 1.6rem;
+    }
+
+    .cart_summary p {
+        font-size: 1.2rem;
+    }
 }
