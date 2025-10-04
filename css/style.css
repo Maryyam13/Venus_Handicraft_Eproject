@@ -1727,7 +1727,7 @@ a {
 
 .flag-box:hover {
     transform: translateY(-5px);
-    background: rgba(var(--coral-rgb), 0.1);
+    background-color: var(--sage) ;
 }
 
 /* Responsive */

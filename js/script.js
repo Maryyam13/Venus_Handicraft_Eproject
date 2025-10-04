@@ -141,15 +141,6 @@ $(document).ready(function () {
 
 //////////////////////////////
 
-
-
-
-
-
-
-
-//////////////////////////////
-
 // / < !--jquery validation-- >
 $(document).ready(function () {
     $(".validateForm").each(function () {
