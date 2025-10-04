@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function checkWidth() {
 
         // >>>>>>>>>>  blog
-        if (window.innerWidth < 786) {
+        if (window.innerWidth < 1000) {
             // Move dropdown to navbar_top if not already there
             const navbarTop = document.querySelector(".navlinks");
             if (!navbarTop.contains(Blog)) {
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ////////////////
         // dropdown
 
-        if (window.innerWidth < 786) {
+        if (window.innerWidth < 1000) {
             // Move dropdown to navbar_top if not already there
             const navbarTop = document.querySelector(".navlinks");
             if (!navbarTop.contains(Dropdown)) {
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // logo
-        if (window.innerWidth < 786) {
+        if (window.innerWidth < 1000) {
             // Move dropdown to navbar_top if not already there
             const navbarTop = document.querySelector(".navbar_top");
             if (!navbarTop.contains(Logo)) {
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // cart_icon &
 
-        if (window.innerWidth < 786) {
+        if (window.innerWidth < 1000) {
             // Move dropdown to navbar_top if not already there
             const navbarTop = document.querySelector(".navbar_top");
             if (!navbarTop.contains(Cart)) {
@@ -97,9 +97,6 @@ $(document).ready(function () {
         e.preventDefault(); // stop the link from navigating
         $(this).parent().toggleClass("open");
     });
-
-
-
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -141,6 +138,15 @@ $(document).ready(function () {
         $(".cart_counter").text(cartValue);
     });
 });
+
+//////////////////////////////
+
+
+
+
+
+
+
 
 //////////////////////////////
 
