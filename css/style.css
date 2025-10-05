@@ -358,14 +358,14 @@ a {
         right: 0;
         bottom: 0;
         width: 100%;
-        overflow-y: auto;
+        overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         background-color: var(--brown);
         box-shadow: 0 8px 20px #843b195d;
         z-index: 2000;
         padding: 1rem;
-        overflow: hidden;
         box-sizing: border-box;
+        
     }
 
     .navlinks li {
@@ -585,6 +585,22 @@ a {
     transform: scale(2);
     color: var(--charcoal);
 }
+
+@media (max-width: 1000px) {
+  .dropdown_content {
+    max-height: 300px;           /* limit height */
+    overflow-y: auto;            /* scrollable */
+    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+    scroll-behavior: smooth;
+  }
+}
+
+html {
+  scroll-padding-top: 100px; /* height of your header */
+}
+
+
+
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 /* Footer */
@@ -2126,6 +2142,14 @@ a {
     .mosaic {
         column-count: 2;
     }
+
+    .abt-content h1{
+        font-size: 4rem;
+    }
+
+    .abt-content p{
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 400px) {
@@ -2229,12 +2253,12 @@ a {
 
 /* Responsive */
 @media (max-width: 768px) {
-    header h1 {
+    .faq_section h1 {
         font-size: 2rem;
     }
 
     .faq-question {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }
 

@@ -94,7 +94,7 @@ $(document).ready(function () {
 
     // dropdown toggle on click (mobile friendly)
     $(".dropdown > a").click(function (e) {
-        e.preventDefault(); // stop the link from navigating
+        e.preventDefault(); 
         $(this).parent().toggleClass("open");
     });
 });
@@ -104,7 +104,6 @@ $(document).ready(function () {
 // AOS link
 AOS.init({
     duration: 800,
-    once: true,
     easing: 'ease-out-cubic'
 });
 
